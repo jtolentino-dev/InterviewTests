@@ -93,17 +93,16 @@ namespace GraduationTracker.Tests.Unit
                         new Course{Id = 4, Name = "Physical Education", Mark=99 }
                     }
                 },
-                // TODO: Verify expectation for [test data: student who didn't take the all required courses]
-                //new Student
-                //{
-                //    Id = 6,
-                //    Courses = new Course[]
-                //    {
-                //        new Course{Id = 2, Name = "Science", Mark=0 },
-                //        new Course{Id = 3, Name = "Literature", Mark=99 },
-                //        new Course{Id = 4, Name = "Physical Education", Mark=99 }
-                //    }
-                //}
+                new Student
+                {
+                    Id = 6,
+                    Courses = new Course[]
+                    {
+                        new Course{Id = 2, Name = "Science", Mark=0 },
+                        new Course{Id = 3, Name = "Literature", Mark=99 },
+                        new Course{Id = 4, Name = "Physical Education", Mark=99 }
+                    }
+                }
             };
         }
 
