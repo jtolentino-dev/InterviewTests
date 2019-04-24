@@ -34,6 +34,28 @@ namespace GraduationTracker.Tests.Unit
                 expectedGraduated);
         }
 
+        [TestMethod]
+        public void TestDidNotTakeCourse()
+        {
+            var tracker = new GraduationTracker();
+            Diploma diploma = GetDiplomaTestData();
+            Student[] students = GetStudentTestData();
+
+            var graduated = new List<Student>();
+
+            foreach (var student in students)
+            {
+                if (tracker.HasGraduated(diploma, student).Item1)
+                {
+                    graduated.Add(student);
+                }
+
+            }
+            var expectedNotGraduated = new int[] { 6 };
+            Assert.IsFalse(
+                graduated.Select(g => g.Id).ToArray().Intersect(expectedNotGraduated).Any());
+        }
+
         private static Student[] GetStudentTestData()
         {
             return new[]
