@@ -55,6 +55,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GraduationTracker.Dal\GraduationTracker.Dal.csproj">
+      <Project>{68C52D05-79FF-41E6-94B8-B736E86949C0}</Project>
+      <Name>GraduationTracker.Dal</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GraduationTracker\GraduationTracker.csproj">
       <Project>{3f941a8a-25c9-4a01-83ab-0393c50bb1cf}</Project>
       <Name>GraduationTracker</Name>
